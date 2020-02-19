@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_19_002357) do
+ActiveRecord::Schema.define(version: 2020_02_19_115312) do
+
+  create_table "edition_participants", force: :cascade do |t|
+    t.string "edition_id"
+    t.string "participant_id"
+    t.string "participant_name"
+    t.string "participant_email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "edition_statuses", force: :cascade do |t|
+    t.string "edition_id"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "event_store_events", id: :string, limit: 36, force: :cascade do |t|
     t.string "event_type", null: false

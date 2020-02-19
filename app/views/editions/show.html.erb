@@ -1,0 +1,13 @@
+<h1>Edition <%= edition_id %>: <%= edition_status.status %></h1>
+
+<h3><%= participants.size %></h3>
+
+<table>
+<% participants.each do |p| %>
+    <tr>
+      <td><%= p.participant_id %></td>
+      <td><%= p.participant_name %></td>
+      <td><%= p.participant_email %></td>
+    </tr>
+<% end %>
+</table>
