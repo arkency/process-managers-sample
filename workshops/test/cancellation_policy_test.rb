@@ -48,7 +48,7 @@ module Workshops
     end
 
     def edition_id
-      SecureRandom.uuid
+      "1bdd51e1-216f-446a-a401-b729d0519282"
     end
 
     def participant_registered_for_edition(edition_id)
