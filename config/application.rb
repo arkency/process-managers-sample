@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module ProcessManagersSample
   class Application < Rails::Application
+    config.paths.add 'workshops/lib', eager_load: true
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
